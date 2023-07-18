@@ -1,0 +1,22 @@
+|        KERNEL        | BUILD-SCAP-OPEN-BINARY | CMAKE-BUILD-DIRECTORY | SCAP-OPEN-AND-BPF-PROBE | SCAP-OPEN-AND-KERNEL-MODULE | SCAP-OPEN-AND-MODERN-PROBE | BUILD-BPF-PROBE | BUILD-KERNEL-MODULE |
+|----------------------|------------------------|-----------------------|-------------------------|-----------------------------|----------------------------|-----------------|---------------------|
+| amazonlinux2-4.19    | ❌                     | ❌                    | ❌                      | ❌                          | ❌                         | ❌              | ❌                  |
+| amazonlinux2-5.10    | ❌                     | ❌                    | ❌                      | ❌                          | ❌                         | ❌              | ❌                  |
+| amazonlinux2-5.15    | ❌                     | ❌                    | ❌                      | ❌                          | ❌                         | ❌              | ❌                  |
+| amazonlinux2-5.4     | ❌                     | ❌                    | ❌                      | ❌                          | ❌                         | ❌              | ❌                  |
+| amazonlinux2022-5.15 | 🟢                     | 🟢                    | 🟢                      | 🟢                          | 🟢                         | 🟢              | 🟢                  |
+| amazonlinux2023-6.1  | 🟢                     | 🟢                    | 🟢                      | 🟢                          | 🟢                         | 🟢              | 🟢                  |
+| archlinux-5.18       | 🟢                     | 🟢                    | 🟢                      | ❌                          | 🟢                         | 🟢              | ❌                  |
+| archlinux-6.0        | 🟢                     | 🟢                    | 🟢                      | 🟢                          | 🟢                         | 🟢              | 🟢                  |
+| centos-3.10          | ❌                     | ❌                    | ❌                      | ❌                          | ❌                         | ❌              | ❌                  |
+| centos-4.18          | 🟢                     | 🟡                    | 🟢                      | 🟢                          | 🟡                         | 🟢              | 🟢                  |
+| centos-5.14          | 🟢                     | 🟢                    | 🟢                      | ❌                          | 🟢                         | 🟢              | ❌                  |
+| fedora-33            | 🟢                     | 🟡                    | ❌                      | 🟢                          | 🟡                         | 🟢              | 🟢                  |
+| fedora-36            | 🟢                     | 🟢                    | 🟢                      | 🟢                          | 🟢                         | 🟢              | 🟢                  |
+| fedora-38            | 🟢                     | 🟢                    | 🟢                      | 🟢                          | 🟢                         | 🟢              | 🟢                  |
+| oraclelinux-3.10     | ❌                     | ❌                    | ❌                      | ❌                          | ❌                         | ❌              | ❌                  |
+| oraclelinux-4.14     | ❌                     | ❌                    | ❌                      | ❌                          | ❌                         | ❌              | ❌                  |
+| oraclelinux-5.15     | 🟢                     | 🟢                    | 🟢                      | 🟢                          | 🟢                         | 🟢              | 🟢                  |
+| oraclelinux-5.4      | ❌                     | ❌                    | ❌                      | ❌                          | ❌                         | ❌              | ❌                  |
+| ubuntu-18.04         | ❌                     | ❌                    | ❌                      | ❌                          | ❌                         | ❌              | ❌                  |
+| ubuntu-23.04         | 🟢                     | 🟢                    | 🟢                      | 🟢                          | 🟢                         | 🟢              | 🟢                  |
