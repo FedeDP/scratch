@@ -24,6 +24,7 @@ jobs:
           mkdir docs/
           curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -L "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693932/zip"
           curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -L "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693934/zip"
+          ls
           unzip matrix_X64.zip 
           mv matrix.md docs/matrix_X64.md
           unzip matrix_ARM64.zip 
