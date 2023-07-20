@@ -1,1 +1,8 @@
 site_name: scratch
+site_url: https://github.com/fededp/scratch/
+nav:
+    - Home: index.md
+    - AMD64: matrix_X64.md
+    - ARM64: matrix_ARM64.md
+
+theme: mkdocs
