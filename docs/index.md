@@ -16,9 +16,10 @@ The modern-bpf driver-enabled scap-open is built using the exactly same process 
 
 ## Supported Archs
 
-For now, supported architectures are:
-* amd64
-* arm64
+For now, supported architectures are:  
+
+* AMD64
+* ARM64
 
 ## Glossary
 
