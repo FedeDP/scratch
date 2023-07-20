@@ -22,8 +22,8 @@ jobs:
       - name: Download artifacts from e2e-falco-tests
         run: |
           mkdir docs/
-          curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -L "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693932/zip"
-          curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -L "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693934/zip"
+          curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -Lo matrix_ARM64.zip "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693932/zip"
+          curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -Lo matrix_X64.zip "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693934/zip"
           ls
           unzip matrix_X64.zip 
           mv matrix.md docs/matrix_X64.md
