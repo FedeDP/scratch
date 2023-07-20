@@ -15,9 +15,20 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Download artifacts from e2e-falco-tests
+        run: |
+          mkdir docs/
+          curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -L -o firmware.zip "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693932/matrix_ARM64"
+          curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -L -o firmware.zip "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693932/matrix_X64"
+          unzip matrix_X64.zip 
+          mv matrix.md docs/matrix_X64.md
+          unzip matrix_ARM64.zip 
+          mv matrix.md docs/matrix_ARM64.md
+      
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
