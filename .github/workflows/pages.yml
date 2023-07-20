@@ -19,16 +19,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Download artifacts from e2e-falco-tests
+      - name: Download matrixes
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: kernel_tests.yaml
+          branch: main
+          repo: alacuku/e2e-falco-tests
+          name: matrix_*
+          name_is_regexp: true
+      
+      - name: Disable Table Of Content for matrixes pages
         run: |
-          curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -Lo matrix_ARM64.zip "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693932/zip"
-          curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -Lo matrix_X64.zip "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693934/zip"
-          unzip matrix_X64.zip 
-          mv matrix.md docs/matrix_X64.md
-          rm matrix_X64.zip 
-          unzip matrix_ARM64.zip 
-          mv matrix.md docs/matrix_ARM64.md
-          rm matrix_ARM64.zip 
+          mv matrix_X64/matrix.md docs/matrix_X64.md
+          mv matrix_ARM64/matrix.md docs/matrix_ARM64.md
           sed -i '1s/^/---\nhide:\n- toc\n---\n\n/' docs/matrix_X64.md
           sed -i '1s/^/---\nhide:\n- toc\n---\n\n/' docs/matrix_ARM64.md
 
