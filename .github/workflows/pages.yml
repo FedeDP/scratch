@@ -21,15 +21,15 @@ jobs:
       
       - name: Download artifacts from e2e-falco-tests
         run: |
-          mkdir docs/
           curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -Lo matrix_ARM64.zip "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693932/zip"
           curl -H "Accept: application/vnd.github+json" -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -Lo matrix_X64.zip "https://api.github.com/repos/alacuku/e2e-falco-tests/actions/artifacts/814693934/zip"
-          ls
           unzip matrix_X64.zip 
           mv matrix.md docs/matrix_X64.md
+          rm matrix_X64.zip 
           unzip matrix_ARM64.zip 
           mv matrix.md docs/matrix_ARM64.md
-      
+          rm matrix_ARM64.zip 
+
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
