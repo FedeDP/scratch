@@ -1,12 +1,1 @@
-site_name: Test Documentation
-site_description: test
-site_author: Federico Di Pierro
-repo_url: https://github.com/FedeDP/scratch/
-
-nav:
-    - Home: index.md
-    - Matrixes:
-        - matrix_amd64.md
-        - matrix_arm64.md
-
-theme: material
+site_name: scratch
