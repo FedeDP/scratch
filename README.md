@@ -29,7 +29,8 @@
 Msg:
 ```
 non-zero return code
-```Err:
+```
+Err:
 ```
 insmod: ERROR: could not insert module driver/scap.ko: Invalid parameters
 ```
@@ -39,7 +40,8 @@ insmod: ERROR: could not insert module driver/scap.ko: Invalid parameters
 Msg:
 ```
 non-zero return code
-```Err:
+```
+Err:
 ```
 error opening device /dev/scap0. Make sure you have root credentials and that the scap module is loaded: No such file or directory (1)
 ```
@@ -49,7 +51,8 @@ error opening device /dev/scap0. Make sure you have root credentials and that th
 Msg:
 ```
 non-zero return code
-```Err:
+```
+Err:
 ```
 make: *** /lib/modules/5.14.0-325.el9.x86_64/build: No such file or directory.  Stop.
 make[4]: *** [all] Error 2
@@ -64,7 +67,8 @@ make: *** [driver] Error 2
 Msg:
 ```
 [Errno 2] No such file or directory
-```Err:
+```
+Err:
 ```
 
 ```
@@ -74,7 +78,8 @@ Msg:
 Msg:
 ```
 non-zero return code
-```Err:
+```
+Err:
 ```
 expr: syntax error
 /bin/sh: clang: command not found
@@ -93,7 +98,8 @@ make: *** [bpf] Error 2
 Msg:
 ```
 [Errno 2] No such file or directory
-```Err:
+```
+Err:
 ```
 
 ```
@@ -103,7 +109,8 @@ Msg:
 Msg:
 ```
 non-zero return code
-```Err:
+```
+Err:
 ```
 warning: the compiler differs from the one used to build the kernel
   The kernel was built by: gcc (GCC) 12.0.1 20220413 (Red Hat 12.0.1-0)
@@ -128,7 +135,8 @@ make: *** [Makefile:273: driver] Error 2
 Msg:
 ```
 non-zero return code
-```Err:
+```
+Err:
 ```
 error opening device /dev/scap0. Make sure you have root credentials and that the scap module is loaded: No such file or directory (1)
 ```
@@ -138,7 +146,8 @@ error opening device /dev/scap0. Make sure you have root credentials and that th
 Msg:
 ```
 non-zero return code
-```Err:
+```
+Err:
 ```
 -- BEGIN PROG LOAD LOG --
 0: (bf) r6 = r1
@@ -555,7 +564,8 @@ libscap: bpf_load_program() event=raw_tracepoint/filler/proc_startupdate: Operat
 Msg:
 ```
 non-zero return code
-```Err:
+```
+Err:
 ```
 make[5]: *** /lib/modules/5.14.16/build: No such file or directory.  Stop.
 make[4]: *** [Makefile:16: all] Error 2
@@ -570,7 +580,8 @@ make: *** [Makefile:273: driver] Error 2
 Msg:
 ```
 [Errno 2] No such file or directory: b'/tmp/scap-open'
-```Err:
+```
+Err:
 ```
 
 ```
@@ -580,7 +591,8 @@ Msg:
 Msg:
 ```
 non-zero return code
-```Err:
+```
+Err:
 ```
 expr: syntax error: unexpected argument ‘1’
 make[5]: *** /lib/modules/5.14.16/build: No such file or directory.  Stop.
@@ -596,7 +608,8 @@ make: *** [Makefile:299: bpf] Error 2
 Msg:
 ```
 [Errno 2] No such file or directory: b'/tmp/scap-open'
-```Err:
+```
+Err:
 ```
 
 ```
@@ -606,7 +619,8 @@ Msg:
 Msg:
 ```
 non-zero return code
-```Err:
+```
+Err:
 ```
 libpman: tracing program type is not supported (errno: 22 | message: Invalid argument)
  (1)
