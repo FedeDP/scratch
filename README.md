@@ -1,58 +1,82 @@
-|        KERNEL        | CMAKE-BUILD-DIRECTORY |           BUILD-KERNEL-MODULE            |           SCAP-OPEN-AND-KERNEL-MODULE            |           BUILD-BPF-PROBE            |           SCAP-OPEN-AND-BPF-PROBE            |            SCAP-OPEN-AND-MODERN-PROBE            |
-|----------------------|-----------------------|------------------------------------------|--------------------------------------------------|--------------------------------------|----------------------------------------------|--------------------------------------------------|
-| amazonlinux2-4.19    | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| amazonlinux2-5.10    | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| amazonlinux2-5.15    | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| amazonlinux2-5.4     | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| amazonlinux2022-5.15 | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| amazonlinux2023-6.1  | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| archlinux-5.18       | 🟢                    | [❌](archlinux-5.18-build-kernel-module) | [❌](archlinux-5.18-scap-open-and-kernel-module) | 🟢                                   | 🟢                                           | 🟢                                               |
-| archlinux-6.0        | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| centos-3.10          | 🟢                    | 🟢                                       |                                                  | 🟢                                   | 🟢                                           | 🟢                                               |
-| centos-4.18          | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| centos-5.14          | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| centos-builder       | 🟢                    | [🟡](centos-builder-build-kernel-module) | [🟡](centos-builder-scap-open-and-kernel-module) | [🟡](centos-builder-build-bpf-probe) | [🟡](centos-builder-scap-open-and-bpf-probe) | 🟢                                               |
-| fedora-5.17          | 🟢                    | [🟡](fedora-5.17-build-kernel-module)    | [❌](fedora-5.17-scap-open-and-kernel-module)    | 🟢                                   | 🟢                                           | 🟢                                               |
-| fedora-5.8           | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | [❌](fedora-5.8-scap-open-and-bpf-probe)     | 🟢                                               |
-| fedora-6.2           | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| fedora-builder       | 🟢                    | [🟡](fedora-builder-build-kernel-module) | [🟡](fedora-builder-scap-open-and-kernel-module) | [🟡](fedora-builder-build-bpf-probe) | [🟡](fedora-builder-scap-open-and-bpf-probe) | 🟢                                               |
-| oraclelinux-3.10     | 🟢                    | 🟢                                       |                                                  | 🟢                                   | 🟢                                           | 🟢                                               |
-| oraclelinux-4.14     | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| oraclelinux-5.15     | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| oraclelinux-5.4      | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | [❌](oraclelinux-5.4-scap-open-and-modern-probe) |
-| ubuntu-4.15          | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
-| ubuntu-6.3           | 🟢                    | 🟢                                       | 🟢                                               | 🟢                                   | 🟢                                           | 🟢                                               |
+|        KERNEL        | CMAKE-BUILD-DIRECTORY |            BUILD-KERNEL-MODULE            |            SCAP-OPEN-AND-KERNEL-MODULE            |            BUILD-BPF-PROBE            |            SCAP-OPEN-AND-BPF-PROBE            |            SCAP-OPEN-AND-MODERN-PROBE             |
+|----------------------|-----------------------|-------------------------------------------|---------------------------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------------|
+| amazonlinux2-4.19    | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| amazonlinux2-5.10    | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| amazonlinux2-5.15    | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| amazonlinux2-5.4     | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| amazonlinux2022-5.15 | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| amazonlinux2023-6.1  | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| archlinux-5.18       | 🟢                    | [❌](#archlinux-5.18-build-kernel-module) | [❌](#archlinux-5.18-scap-open-and-kernel-module) | 🟢                                    | 🟢                                            | 🟢                                                |
+| archlinux-6.0        | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| centos-3.10          | 🟢                    | 🟢                                        |                                                   | 🟢                                    | 🟢                                            | 🟢                                                |
+| centos-4.18          | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| centos-5.14          | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| centos-builder       | 🟢                    | [🟡](#centos-builder-build-kernel-module) | [🟡](#centos-builder-scap-open-and-kernel-module) | [🟡](#centos-builder-build-bpf-probe) | [🟡](#centos-builder-scap-open-and-bpf-probe) | 🟢                                                |
+| fedora-5.17          | 🟢                    | [🟡](#fedora-5.17-build-kernel-module)    | [❌](#fedora-5.17-scap-open-and-kernel-module)    | 🟢                                    | 🟢                                            | 🟢                                                |
+| fedora-5.8           | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | [❌](#fedora-5.8-scap-open-and-bpf-probe)     | 🟢                                                |
+| fedora-6.2           | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| fedora-builder       | 🟢                    | [🟡](#fedora-builder-build-kernel-module) | [🟡](#fedora-builder-scap-open-and-kernel-module) | [🟡](#fedora-builder-build-bpf-probe) | [🟡](#fedora-builder-scap-open-and-bpf-probe) | 🟢                                                |
+| oraclelinux-3.10     | 🟢                    | 🟢                                        |                                                   | 🟢                                    | 🟢                                            | 🟢                                                |
+| oraclelinux-4.14     | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| oraclelinux-5.15     | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| oraclelinux-5.4      | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | [❌](#oraclelinux-5.4-scap-open-and-modern-probe) |
+| ubuntu-4.15          | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
+| ubuntu-6.3           | 🟢                    | 🟢                                        | 🟢                                                | 🟢                                    | 🟢                                            | 🟢                                                |
 
 
 # archlinux-5.18 build-kernel-module
 
-Msg:non-zero return code
-Stderr: insmod: ERROR: could not insert module driver/scap.ko: Invalid parameters
+Msg:
+```
+non-zero return code
+```Err:
+```
+insmod: ERROR: could not insert module driver/scap.ko: Invalid parameters
+```
 
 # archlinux-5.18 scap-open-and-kernel-module
 
-Msg:non-zero return code
-Stderr: error opening device /dev/scap0. Make sure you have root credentials and that the scap module is loaded: No such file or directory (1)
+Msg:
+```
+non-zero return code
+```Err:
+```
+error opening device /dev/scap0. Make sure you have root credentials and that the scap module is loaded: No such file or directory (1)
+```
 
 # centos-builder build-kernel-module
 
-Msg:non-zero return code
-Stderr: make: *** /lib/modules/5.14.0-325.el9.x86_64/build: No such file or directory.  Stop.
+Msg:
+```
+non-zero return code
+```Err:
+```
+make: *** /lib/modules/5.14.0-325.el9.x86_64/build: No such file or directory.  Stop.
 make[4]: *** [all] Error 2
 make[3]: *** [driver/CMakeFiles/driver] Error 2
 make[2]: *** [driver/CMakeFiles/driver.dir/all] Error 2
 make[1]: *** [driver/CMakeFiles/driver.dir/rule] Error 2
 make: *** [driver] Error 2
+```
 
 # centos-builder scap-open-and-kernel-module
 
-Msg:[Errno 2] No such file or directory
-Stderr: 
+Msg:
+```
+[Errno 2] No such file or directory
+```Err:
+```
+
+```
 
 # centos-builder build-bpf-probe
 
-Msg:non-zero return code
-Stderr: expr: syntax error
+Msg:
+```
+non-zero return code
+```Err:
+```
+expr: syntax error
 /bin/sh: clang: command not found
 expr: syntax error
 make[4]: warning: jobserver unavailable: using -j1.  Add `+' to parent make rule.
@@ -62,16 +86,26 @@ make[3]: *** [driver/bpf/CMakeFiles/bpf] Error 2
 make[2]: *** [driver/bpf/CMakeFiles/bpf.dir/all] Error 2
 make[1]: *** [driver/bpf/CMakeFiles/bpf.dir/rule] Error 2
 make: *** [bpf] Error 2
+```
 
 # centos-builder scap-open-and-bpf-probe
 
-Msg:[Errno 2] No such file or directory
-Stderr: 
+Msg:
+```
+[Errno 2] No such file or directory
+```Err:
+```
+
+```
 
 # fedora-5.17 build-kernel-module
 
-Msg:non-zero return code
-Stderr: warning: the compiler differs from the one used to build the kernel
+Msg:
+```
+non-zero return code
+```Err:
+```
+warning: the compiler differs from the one used to build the kernel
   The kernel was built by: gcc (GCC) 12.0.1 20220413 (Red Hat 12.0.1-0)
   You are using:           gcc (GCC) 12.2.1 20221121 (Red Hat 12.2.1-4)
 /root/repos/falcosecurity-libs/build/driver/src/main.c: In function ‘scap_init’:
@@ -87,16 +121,26 @@ make[3]: *** [driver/CMakeFiles/driver.dir/build.make:70: driver/CMakeFiles/driv
 make[2]: *** [CMakeFiles/Makefile2:595: driver/CMakeFiles/driver.dir/all] Error 2
 make[1]: *** [CMakeFiles/Makefile2:602: driver/CMakeFiles/driver.dir/rule] Error 2
 make: *** [Makefile:273: driver] Error 2
+```
 
 # fedora-5.17 scap-open-and-kernel-module
 
-Msg:non-zero return code
-Stderr: error opening device /dev/scap0. Make sure you have root credentials and that the scap module is loaded: No such file or directory (1)
+Msg:
+```
+non-zero return code
+```Err:
+```
+error opening device /dev/scap0. Make sure you have root credentials and that the scap module is loaded: No such file or directory (1)
+```
 
 # fedora-5.8 scap-open-and-bpf-probe
 
-Msg:non-zero return code
-Stderr: -- BEGIN PROG LOAD LOG --
+Msg:
+```
+non-zero return code
+```Err:
+```
+-- BEGIN PROG LOAD LOG --
 0: (bf) r6 = r1
 1: (b7) r1 = 0
 2: (63) *(u32 *)(r10 -8) = r1
@@ -504,41 +548,67 @@ processed 8679 insns (limit 1000000) max_states_per_insn 6 total_states 86 peak_
 
 -- END PROG LOAD LOG --
 libscap: bpf_load_program() event=raw_tracepoint/filler/proc_startupdate: Operation not permitted (1)
+```
 
 # fedora-builder build-kernel-module
 
-Msg:non-zero return code
-Stderr: make[5]: *** /lib/modules/5.14.16/build: No such file or directory.  Stop.
+Msg:
+```
+non-zero return code
+```Err:
+```
+make[5]: *** /lib/modules/5.14.16/build: No such file or directory.  Stop.
 make[4]: *** [Makefile:16: all] Error 2
 make[3]: *** [driver/CMakeFiles/driver.dir/build.make:70: driver/CMakeFiles/driver] Error 2
 make[2]: *** [CMakeFiles/Makefile2:595: driver/CMakeFiles/driver.dir/all] Error 2
 make[1]: *** [CMakeFiles/Makefile2:602: driver/CMakeFiles/driver.dir/rule] Error 2
 make: *** [Makefile:273: driver] Error 2
+```
 
 # fedora-builder scap-open-and-kernel-module
 
-Msg:[Errno 2] No such file or directory: b'/tmp/scap-open'
-Stderr: 
+Msg:
+```
+[Errno 2] No such file or directory: b'/tmp/scap-open'
+```Err:
+```
+
+```
 
 # fedora-builder build-bpf-probe
 
-Msg:non-zero return code
-Stderr: expr: syntax error: unexpected argument ‘1’
+Msg:
+```
+non-zero return code
+```Err:
+```
+expr: syntax error: unexpected argument ‘1’
 make[5]: *** /lib/modules/5.14.16/build: No such file or directory.  Stop.
 make[4]: *** [Makefile:38: all] Error 2
 make[3]: *** [driver/bpf/CMakeFiles/bpf.dir/build.make:70: driver/bpf/CMakeFiles/bpf] Error 2
 make[2]: *** [CMakeFiles/Makefile2:647: driver/bpf/CMakeFiles/bpf.dir/all] Error 2
 make[1]: *** [CMakeFiles/Makefile2:654: driver/bpf/CMakeFiles/bpf.dir/rule] Error 2
 make: *** [Makefile:299: bpf] Error 2
+```
 
 # fedora-builder scap-open-and-bpf-probe
 
-Msg:[Errno 2] No such file or directory: b'/tmp/scap-open'
-Stderr: 
+Msg:
+```
+[Errno 2] No such file or directory: b'/tmp/scap-open'
+```Err:
+```
+
+```
 
 # oraclelinux-5.4 scap-open-and-modern-probe
 
-Msg:non-zero return code
-Stderr: libpman: tracing program type is not supported (errno: 22 | message: Invalid argument)
+Msg:
+```
+non-zero return code
+```Err:
+```
+libpman: tracing program type is not supported (errno: 22 | message: Invalid argument)
  (1)
+```
 
